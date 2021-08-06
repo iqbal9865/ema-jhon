@@ -1,0 +1,17 @@
+.nav-link {
+    font-size: 19px;
+    margin: 0 20px;
+    color: white;
+}
+.nav-item:hover{
+    background-color: orange;
+}
+.nav-link:hover{
+    color: black!important;
+}
+.form-group input{
+    border-radius: 0;
+}
+.navigation{
+    width: 75%;
+}
