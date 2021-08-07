@@ -9,4 +9,4 @@ const Header = () => {
     );
 };
 
-export default Header;<Navbar></Navbar>
+export default Header;

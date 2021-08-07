@@ -1,0 +1,13 @@
+.product-container{
+    border-bottom: 1px solid black;
+    margin: 10px
+}
+.buy-now-btn{
+    background-color: goldenrod;
+    padding: 3px 28px;
+    border: none;
+    font-weight: 400;
+}
+.product-name{
+    text-align: justify;
+}
