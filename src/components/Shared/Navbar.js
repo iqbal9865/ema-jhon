@@ -3,6 +3,7 @@ import logo from '../../images/logo.png'
 import './Navbar.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCartPlus, faHeart } from '@fortawesome/free-solid-svg-icons'
+import { Link } from "react-router-dom"
 const Navbar = () => {
     
     return (
@@ -18,15 +19,14 @@ const Navbar = () => {
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Products</a>
+                <Link class="nav-link active" aria-current="page" to="/">Products</Link>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link" href="#">Order Reviews</a>
+                <Link class="nav-link" to="/review">Order Reviews</Link>
                 </li>
-                <li class="nav-item dropdown"> 
-                </li>
+               
                 <li class="nav-item">
-                <a class="nav-link" href="#">Manage Inventory Here</a>
+                <Link class="nav-link" to="/manageInventory">Manage Inventory Here</Link>
                 </li>
             </ul>
            
@@ -34,7 +34,7 @@ const Navbar = () => {
                     <div className="form-group">
                         <input type="text" className="form-control" placeholder="Type Here To Search" /> 
                     </div>
-                    <FontAwesomeIcon style={{color:'white', fontSize:"25px", margin:' 0 20px', cursor:'pointer'}} icon={faCartPlus} />
+                    <FontAwesomeIcon style={{color:'white', fontSize:"25px", marginLeft:'20px', cursor:'pointer'}} icon={faCartPlus} /> <span style={{color:"white",marginLeft:'5px'}}></span>
                     <FontAwesomeIcon style={{color:'white', fontSize:"25px", margin:' 0 20px',cursor:'pointer'}} icon={faHeart} />
                    
             </form>
