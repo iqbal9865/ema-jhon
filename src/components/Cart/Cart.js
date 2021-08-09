@@ -28,7 +28,7 @@ const Cart = ({cart}) => {
     return (
         <div className="cart-container">
             <h3 id="heading">Order Summary</h3>
-            <table class="table table-hover">
+            <table className="table table-hover">
                 <tbody>
                     <tr>
                         <td>Item Ordered: <strong>{cart.length}</strong></td>
@@ -46,14 +46,16 @@ const Cart = ({cart}) => {
                     </tr>
 
                     <tr>
-                        <h5>Total Price: <strong> ${grandTotal}</strong></h5>
+                        <td>Total Price: <strong> ${grandTotal}</strong></td>
                     </tr>
                 </tbody>
-                <Link to="/review"><button style={{color:"black", fontSize: "16px"}} className="rounded buy-now-btn">REVIEW ORDER</button></Link>
+                
             </table>
+            <Link to="/review"><button style={{color:"black", fontSize: "16px", marginTop:"10px"}} className="rounded buy-now-btn">REVIEW ORDER</button></Link>
             
         </div>
     );
 };
+
 
 export default Cart;

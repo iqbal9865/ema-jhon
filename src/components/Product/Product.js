@@ -7,7 +7,6 @@ import {Link} from "react-router-dom";
 const Product = (props) => {
     const {name, img, seller, price, stock, key, features} = props.product;
     const {showAddToCart} = props;
-    console.log(props.product)
 
     return (
         <div className="d-flex product-container row">

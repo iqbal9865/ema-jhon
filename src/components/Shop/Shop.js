@@ -4,6 +4,7 @@ import Header from '../Header/Header';
 import Product from '../Product/Product';
 import fakeData from './../../fakeData/index';
 import './Shop.css'
+import {addToDatabaseCart} from "../../utilities/databaseManager"
 const Shop = () => {
 
     const DataFirstTen = fakeData.slice(0, 10); 
@@ -11,7 +12,10 @@ const Shop = () => {
     const [cart, setCart] = useState([])
     const handleAddToCart = (product) => {
         const newCart = [...cart, product]
-        setCart(newCart)
+        setCart(newCart);
+        const sameProduct = newCart.filter(pd => pd.key === product.key);
+        const count = sameProduct.length;
+        addToDatabaseCart(product.key, count)
     }
     return (
         <div >
