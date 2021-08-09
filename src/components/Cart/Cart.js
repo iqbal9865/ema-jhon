@@ -1,5 +1,6 @@
 import React from 'react';
 import "./Cart.css";
+import {Link} from "react-router-dom";
 
 const Cart = ({cart}) => {
 
@@ -48,8 +49,9 @@ const Cart = ({cart}) => {
                         <h5>Total Price: <strong> ${grandTotal}</strong></h5>
                     </tr>
                 </tbody>
-  
+                <Link to="/review"><button style={{color:"black", fontSize: "16px"}} className="rounded buy-now-btn">REVIEW ORDER</button></Link>
             </table>
+            
         </div>
     );
 };
