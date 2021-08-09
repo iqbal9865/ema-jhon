@@ -20,9 +20,10 @@ const Product = (props) => {
                 <p className='mx-4'>Price: <strong>${price}</strong></p>
                 <p className='mx-4'>Only <strong>{stock}</strong>  Left Stock - Soon </p>
 
-                { showAddToCart ? <button onClick={() => props.handleAddToCart(props.product)} className=" rounded mx-4 mb-4 buy-now-btn">ADD TO CART  <FontAwesomeIcon style={{color:'black', fontSize:"15px", marginLeft:' 3px'}} icon={faCartPlus} /></button>
-                :    
-                    features.map(feature => <li className="mx-4 text-secondary">{feature.description} : {feature.value}</li>)     
+                { showAddToCart ? <button onClick={() => props.handleAddToCart(props.product)} className=" rounded mx-4 mb-4 buy-now-btn">ADD TO CART  <FontAwesomeIcon style={{color:'black', fontSize:"15px", marginLeft:' 3px'}} icon={faCartPlus} /></button> : 
+                <div> 
+                    {features.map(feature => <li className="mx-4">{feature.description} : {feature.value}</li>) }
+                </div>              
                 }
                
             </div>
