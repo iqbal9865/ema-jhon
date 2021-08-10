@@ -3,7 +3,7 @@ import Cart from '../Cart/Cart';
 import Header from '../Header/Header';
 import Product from '../Product/Product';
 import fakeData from './../../fakeData/index';
-import './Shop.css'
+import './Shop.css';
 import {addToDatabaseCart} from "../../utilities/databaseManager"
 const Shop = () => {
 
@@ -18,7 +18,7 @@ const Shop = () => {
         addToDatabaseCart(product.key, count)
     }
     return (
-        <div >
+        <div>
             <Header />
             <div className="container-fluid">            
             <div className='row my-5'>    
